@@ -1,0 +1,22 @@
+﻿@inject NavigationManager NavigationManager
+<div>
+    <div style="display:flex; justify-content:space-between;">
+        <MatButton @onclick='() => Navigate("/  ")' Outlined="true">
+            <MatIcon Icon="@MatIconNames.Home"></MatIcon>
+        </MatButton>
+        <MatButton @onclick='() => Navigate("fetchdata")' Outlined="true">
+            <MatIcon Icon="@MatIconNames.Contact_mail"></MatIcon>
+        </MatButton>
+        <MatButton @onclick='() => Navigate("counter")' Outlined="true">
+            <MatIcon Icon="@MatIconNames.Access_time"></MatIcon>
+        </MatButton>
+    </div>
+
+</div>
+
+@code {
+    private void Navigate(string page)
+    {
+        NavigationManager.NavigateTo(page);
+    }
+}
